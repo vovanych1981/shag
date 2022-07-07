@@ -1,127 +1,215 @@
-package lesson2;
+package lesson4;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-//        Integer1◦
-//. Дано расстояние L в сантиметрах. Используя операцию деления
-//        нацело, найти количество полных метров в нем (1 метр = 100 см).
+//        If1. Дано целое число. Если оно является положительным, то прибавить к
+//        нему 1; в противном случае не изменять его. Вывести полученное число
+//        Scanner in = new Scanner(System.in);
+//        int a = in.nextInt();
+//        if(a>0) {
+//            a++;
+//        }
+//            System.out.println(a);
+
+//        If2. Дано целое число. Если оно является положительным, то прибавить к
+//        нему 1; в противном случае вычесть из него 2. Вывести полученное число.
 
 //        Scanner in = new Scanner(System.in);
-//        System.out.println("Введите целое число - к-во в сантиметрах: ");
-//        int L = in.nextInt();
-//        System.out.println(L/100 + " метров");
-//
-//
-//        Integer2◦
-//. Дана масса M в килограммах. Используя операцию деления нацело,
-//        найти количество полных тонн в ней (1 тонна = 1000 кг).
+//        int a = in.nextInt();
+//        if (a > 0) {
+//            a++;
+//        }
+//        else{
+//            a -= 2;
+//        }
+//        System.out.println(a);
+
+//        If3. Дано целое число. Если оно является положительным, то прибавить к
+//        нему 1; если отрицательным, то вычесть из него 2; если нулевым, то
+//        заменить его на 10. Вывести полученное число.
 //        Scanner in = new Scanner(System.in);
-//        System.out.println("Введите целое число - к-во килограммов: ");
-//        int K = in.nextInt();
-//        System.out.println(K/1000 + " тонн");
-//
-////        Integer3◦
-//. Дан размер файла в байтах. Используя операцию деления нацело,
-//        найти количество полных килобайтов, которые занимает данный файл
-////                (1 килобайт = 1024 байта).
+//        int a = in.nextInt();
+//        if(a > 0){
+//            a++;
+//        }
+//        else if(a<0){
+//            a -= 2;
+//        }
+//        else{
+//            a = 10;
+//        }
+//        System.out.println(a);
+
+//        If4◦
+//. Даны три целых числа. Найти количество положительных чисел в исходном наборе.
 //        Scanner in = new Scanner(System.in);
-//        int byute
-//
-//        Integer6◦
-//. Дано двузначное число. Вывести вначале его левую цифру (десятки), а затем — его правую цифру (единицы). Для нахождения десятков
-//        использовать операцию деления нацело, для нахождения единиц — операцию взятия остатка от деления.
-
-//        Scanner in = new Scanner(System.in);
-//        System.out.println("Введите двузначное число: ");
-//        int D = in.nextInt();
-//        System.out.println(D/10 + " - это десятки");
-//        System.out.println(D%10 + " - это единицы");
-
-//        Integer7◦
-//. Дано двузначное число. Найти сумму и произведение его цифр.
-//        Scanner in = new Scanner(System.in);
-//        System.out.println("Введите двузначное число: ");
-//        int D = in.nextInt();
-//        int a = D/10;
-//        int b = D%10;
-//        System.out.println((a+b) + " - это сумма");
-//        System.out.println((a*b) + " - это произведение");
-
-//        Integer8◦
-//. Дано двузначное число. Вывести число, полученное при перестановке цифр исходного числа.
-
-//        Scanner in = new Scanner(System.in);
-//        System.out.println("Введите двузначное число: ");
-//        int number = in.nextInt();
-//        int chislo1 = number/10;
-//        int chislo2 = number%10;
-//        int x = chislo2 * 10 + chislo1;
-//
-//        System.out.println(x + " Это новое число");
-
-//        Integer9◦
-//. Дано трехзначное число. Используя одну операцию деления нацело,
-//  вывести первую цифру данного числа (сотни).
-
-//        Scanner in = new Scanner(System.in);
-//        System.out.println("Введите трехзначное число: ");
-//        int number = in.nextInt();
-//        System.out.println("Первая цифра равняется - " + number/100);
-
-//        Integer10◦
-//. Дано трехзначное число. Вывести вначале его последнюю цифру
-// (единицы), а затем — его среднюю цифру (десятки).
-
-
-//        Scanner in = new Scanner(System.in);
-//        System.out.println("Введите трехзначное число: ");
-//        int number = in.nextInt();
-//        System.out.println("Единицы - " + number%10);
-//        int des = (number/10) % 10; // (number%100) / 10;
-//        System.out.println("Единицы - " + des);
-
-//        Integer11◦
-//. Дано трехзначное число. Найти сумму и произведение его цифр.
-//        Scanner in = new Scanner(System.in);
-//        System.out.println("Введите трехзначное число: ");
-//        int number = in.nextInt();
-//        int edinicy = number%10;
-//        int des = (number / 10) % 10;
-//        int sotni = number / 100;
-//        System.out.println("Сумма: " + (edinicy+des+sotni));
-//        System.out.println("Произведение: " + (edinicy*des*sotni));
-
-//        Integer12◦
-//. Дано трехзначное число. Вывести число, полученное при прочтении исходного числа справа налево.
-
-//        Scanner in = new Scanner(System.in);
-//        System.out.println("Введите трехзначное число: ");
-//        int number = in.nextInt();
-//        int edinicy = number%10;
-//        int des = (number / 10) % 10;
-//        int sotni = number / 100;
-////        System.out.printf("%s%s%s\n", edinicy, des, sotni);
-//        int res = 100*edinicy + 10*des + sotni;
+//        int a = in.nextInt();
+//        int b = in.nextInt();
+//        int c = in.nextInt();
+//        int res = 0;
+//        if(a>0){
+//            res++;
+//        }
+//        if(b>0){
+//            res++;
+//        }
+//        if(c>0){
+//            res++;
+//        }
 //        System.out.println(res);
 
-//        Integer13◦
-//. Дано трехзначное число. В нем зачеркнули первую слева цифру и
-//  приписали ее справа. Вывести полученное число.
+//        If5. Даны три целых числа. Найти количество положительных и количество
+//        отрицательных чисел в исходном наборе
+
+//        Scanner in = new Scanner(System.in);
+//        int a = in.nextInt();
+//        int b = in.nextInt();
+//        int c = in.nextInt();
+//        int res = 0;
+//
+//        if(a>0){
+//            res++;
+//        }
+//
+//        if(b>0){
+//            res++;
+//        }
+//
+//        if(c>0){
+//            res++;
+//        }
+//        int otr = 0;
+//        if(a<0){
+//            otr++;
+//        }
+//
+//        if(b<0){
+//            otr++;
+//        }
+//
+//        if(c<0){
+//            otr++;
+//        }
+//        System.out.println(res);
+//        System.out.println(otr);
+
+//        If6◦
+//. Даны два числа. Вывести большее из них. Усли числа равны, вывести "=".
+//        Scanner in = new Scanner(System.in);
+//        int a = in.nextInt();
+//        int b = in.nextInt();
+//
+//        if (a > b) {
+//            System.out.println(a);
+//        } else {
+//            if (b > a) {
+//                System.out.println(b);
+//            } else {
+//                System.out.println("=");
+//            }
+
+//        If7. Даны два числа. Вывести порядковый номер меньшего из них.
+//        Scanner in = new Scanner(System.in);
+//        int a = in.nextInt();
+//        int b = in.nextInt();
+//
+//        if(a<b){
+//            System.out.println(1);
+//        }
+//        if(a>b){
+//            System.out.println(2);
+//        }
+
+//        If8◦
+//. Даны два числа. Вывести вначале большее, а затем меньшее из них.
+
+//        Scanner in = new Scanner(System.in);
+//        int a = in.nextInt();
+//        int b = in.nextInt();
+//
+//        if (a > b) {
+//            System.out.println();
+//        }
+//        else (a<b) {
+//                System.out.println();
+//        }
+
+//        If9. Даны две переменные вещественного типа: A, B.
+//        Перераспределить значения данных переменных так, чтобы в A оказалось меньшее из значений,
+//        а в B — большее. Вывести новые значения переменных A и B.
+
+//        Scanner in = new Scanner(System.in);
+//        int a = in.nextInt();
+//        int b = in.nextInt();
+//        if(b < a){
+//            int c = a;
+//            a = b;
+//            b = c;
+//        }
+//        System.out.println(a + " " + b);
+
+//        If11. Даны две переменные целого типа: A и B. Если их значения не равны, то
+//        присвоить каждой переменной большее из этих значений, а если равны,
+//        то присвоить переменным нулевые значения. Вывести новые значения
+//        переменных A и B.
+
+//        Scanner in = new Scanner(System.in);
+//        int a = in.nextInt();
+//        int b = in.nextInt();
+//        if (a != b) {
+//            if(a>b){
+//                b = a;
+//            }
+//            else{
+//                a=b;
+//            }
+//
+//        }
+//        else {
+//            a = 0;
+//            b = 0;
+//        }
+
+//        If12◦
+//        Даны три числа. Найти наименьшее из них
+//        Scanner in = new Scanner(System.in);
+//        int a = in.nextInt();
+//        int b = in.nextInt();
+//        int c = in.nextInt();
+//        int res = 0;
+//        if(a<b && a<c) res = a;
+//        else if(b<a && b <c) res = b;
+//        else if(c<a && c <b) res = c;
+//        System.out.println(res);
+
+//        If15. Даны три числа. Найти сумму двух наибольших из них.
+
+        /*Scanner in = new Scanner(System.in);
+        int a = in.nextInt();
+        int b = in.nextInt();
+        int c = in.nextInt();
+        int res = 0;
+        if (a < b && a < c) res = b + c;
+        else if (b < a && b < c) res = a + c;
+        else if (c < a && c < b) res = a + b;
+        System.out.println(res);*/
+
+//        If18. Даны три целых числа, одно из которых отлично от двух других, равных между собой.
+//        Определить порядковый номер числа, отличного от
+//        остальных.
+
         Scanner in = new Scanner(System.in);
-        System.out.println("Введите трехзначное число: ");
-        int number = in.nextInt();
-        int ed = number%100;
-        int sotni = number / 100;
-        int nov_chislo = ed*10 + sotni;
-        System.out.println(nov_chislo);
-
-
-
-
-
+        int a = in.nextInt();
+        int b = in.nextInt();
+        int c = in.nextInt();
+        int res = 0;
+        if (a == b) res = 3;
+        else if (a == c) res = 2;
+        else if (b == c) res = 1;
+        System.out.println(res);
 
     }
-
 }
+
