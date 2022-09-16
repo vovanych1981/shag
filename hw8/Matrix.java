@@ -1,3 +1,9 @@
+/*
+* Кондратенко В.И.
+* Matrix 20, 21
+* */
+
+
 package hw8;
 
 import java.util.Random;
