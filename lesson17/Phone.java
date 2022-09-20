@@ -13,8 +13,8 @@ public class Phone {
     public void receiveCall(String name){
         System.out.println("Звонит " + name);
     }
-    public void getNumber(){
-        System.out.println("Звонит номер " + number);
+    public int getNumber(){
+        return number;
     }
     public Phone(int n, String m, int w){
         this(n,m);
