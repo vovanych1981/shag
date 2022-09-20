@@ -10,6 +10,10 @@ public class Main {
         System.out.println(ph2);
         System.out.println(ph3);
 
+        ph1.receiveCall("Валя", 222333);
+        ph2.receiveCall("Коля", 444555);
+        ph3.receiveCall("Петя", 77888);
+
 
     }
 }

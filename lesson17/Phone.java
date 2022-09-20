@@ -7,7 +7,7 @@ public class Phone {
 
     @Override
     public String toString() {
-        return "number " + number + " model " + model + " weight " + weight ;
+        return "номер " + number + " модель " + model + " вес телефона " + weight ;
     }
 
     public void receiveCall(String name){
@@ -28,7 +28,6 @@ public class Phone {
 
     }
     public void receiveCall(String name, int number){
-        System.out.println("Звонит " + name + "по номеру телефона " + number);
+        System.out.println("Звонит " + name + " по номеру телефона " + number);
     }
-
 }
