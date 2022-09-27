@@ -90,19 +90,19 @@ public class Reader {
 
     }
 
-    public void takeBook() {
+    public void takeBook(String ... typeBooks) {
         System.out.println(this.fio + " взял книги: ");
-        for (){
-            System.out.println();
+        for (int i = 0; i < typeBooks.length; i++) {
+            System.out.println(typeBooks[i]);
         }
         System.out.println();
     }
 
 
-    public void takeBook() {
+    public void takeBook(Book...books) {
         System.out.println(this.fio + " взял книги: ");
-        for () {
-            System.out.println(book.getName() + " - название книги, " + book.getAutor() + " - автор книги");
+        for (int i = 0; i < books.length; i++) {
+            System.out.println(books[i]);
         }
         System.out.println();
     }
@@ -110,5 +110,20 @@ public class Reader {
     public void returnBook(int number) {
         System.out.println(this.fio + " вернул " + number + " книги.");
     }
+    public void returnBook(String ... typeBooks) {
+        System.out.println(this.fio + " вернул книги: ");
+        for (int i = 0; i < typeBooks.length; i++) {
+            System.out.println(typeBooks[i]);
+        }
+        System.out.println();
+    }
 
+
+    public void returnBook(Book...books) {
+        System.out.println(this.fio + " вернул книги: ");
+        for (int i = 0; i < books.length; i++) {
+            System.out.println(books[i]);
+        }
+        System.out.println();
+    }
 }
