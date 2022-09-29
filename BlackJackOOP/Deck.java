@@ -1,9 +1,12 @@
 package lesson20.BlackJackOOP;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
 
 public class Deck {
     private final int suitSize = 13;
+    private final int deckSize = 52;
 
     private ArrayList<Card> deck;
 
@@ -22,7 +25,11 @@ public class Deck {
     }
 
     private void shuffle() {
-
+        Random gen = new Random();
+        for (int i = 0; i < deck.size() - 1; i++) {
+            int randomIndex = gen.nextInt(deckSize - i - 1) + i + 1;
+            Collections.swap(deck,i, randomIndex);
+        }
     }
 
     @Override
@@ -39,5 +46,10 @@ public class Deck {
 
         }
 
+    }
+    public Card sendCard(){
+        Card t = deck.get(deck.size() - 1);
+        deck.remove( deck.size() - 1);
+        return t;
     }
 }
