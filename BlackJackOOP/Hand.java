@@ -4,14 +4,13 @@ import java.util.ArrayList;
 
 public abstract class Hand {
     protected ArrayList<Card> hand;
+
     // String name;
-    Hand(){
+    Hand() {
         hand = new ArrayList<>();
     }
-    public void takeCard(Deck deck){
-        hand.add(deck.sendCard());
-    }
-    public String toString(){
+
+    public String toString() {
         String res = "";
         for (int i = 0; i < hand.size(); i++) {
             res += hand.get(i).toString();
@@ -19,13 +18,20 @@ public abstract class Hand {
         }
         return res;
     }
-    public int calcScore(){
+
+    public int calcScore() {
         // сделать чтобы туз был или 1 или 11 очков
         int score = 0;
-        for(Card card: hand){
+        for (Card card : hand) {
             score += card.getRank();
         }
         return score;
     }
-    public abstract void play();
+
+    public abstract void play(Deck deck) throws InterruptedException;
+
+    public void takeOneCard(Deck deck) {
+        hand.add(deck.sendCard());
+    }
+
 }
