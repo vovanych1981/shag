@@ -77,6 +77,15 @@ public class lesson23 {
 //        должна быть преобразована в"Object-oriented programming is a programming language model organized around
 //        objects rather than "actions" and data rather than logic. OOP blabla. Object-oriented programming bla."
 
+        String text = "Object-oriented programming is a programming language model organized around objects " +
+                "rather than actions and data rather than logic. " +
+            "Object-oriented programming blabla. Object-oriented programming bla.";
+
+        String newText = "Object-oriented programming";
+        text = text.replaceAll(newText, "OOP");
+        System.out.println(text);
+
+
 //        4. Найти два средних знака строки
 //        Даны строки разной длины (длина - четное число), необходимо вернуть ее два средних знака.
 //        Например, если дана строка "string"  результат будет "ri", для строки "code" результат "od",
