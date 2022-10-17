@@ -13,6 +13,11 @@ public class StringAbr {
         return 'а' <= str.charAt(i) && str.charAt(i) <= 'я';
     }
 
+    public static boolean isLower(String str, int i) {
+        return 'A' <= str.charAt(i) && str.charAt(i) <= 'Z';
+    }
+
+
     public static int taskString15(String str) {
         int num = 0;
         for (int i = 0; i < str.length(); i++) {
@@ -44,10 +49,23 @@ public class StringAbr {
 //        строчных латинских и русских букв.
         Scanner in = new Scanner(System.in);
         //System.out.println("Введите буквы на латинском и русском языках в разных регистрах");
-        System.out.println("Введите строку на латинском языке с ПРОПИСНЫХ букв без пробелов");
+        System.out.println("Введите строку на латинском языке из ПРОПИСНЫХ букв без пробелов");
         String str = in.nextLine();
         //System.out.println(taskString15(str));
         System.out.println(taskString16(str));
+
+
+        /*StringBuilder sb = new StringBuilder();     // еще решение Task16
+        Scanner in = new Scanner(System.in);
+        String str = in.nextLine();
+        for (int i = 0; i < str.length(); i++)
+            if ((str.charAt(i) >= 'A') && (str.charAt(i) <= 'Z')) {
+                int t = (int) (str.charAt(i)) + 32;
+                sb.append((char) t);
+            } else
+                sb.append(str.charAt(i));
+
+        System.out.println(sb + " ");*/
 
     }
 }
