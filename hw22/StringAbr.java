@@ -47,25 +47,25 @@ public class StringAbr {
     public static void main(String[] args) {
 //        String15. Дана строка. Подсчитать общее количество содержащихся в ней
 //        строчных латинских и русских букв.
-        Scanner in = new Scanner(System.in);
+        //Scanner in = new Scanner(System.in);
         //System.out.println("Введите буквы на латинском и русском языках в разных регистрах");
-        System.out.println("Введите строку на латинском языке из ПРОПИСНЫХ букв без пробелов");
-        String str = in.nextLine();
+        //System.out.println("Введите строку на латинском языке из ПРОПИСНЫХ букв без пробелов");
+        //String str = in.nextLine();
         //System.out.println(taskString15(str));
-        System.out.println(taskString16(str));
+        //System.out.println(taskString16(str));
 
 
-        /*StringBuilder sb = new StringBuilder();     // еще решение Task16
+        StringBuilder sb = new StringBuilder();     // еще решение Task16
         Scanner in = new Scanner(System.in);
         String str = in.nextLine();
         for (int i = 0; i < str.length(); i++)
-            if ((str.charAt(i) >= 'A') && (str.charAt(i) <= 'Z')) {
+            if (isLower(str,i)) {
                 int t = (int) (str.charAt(i)) + 32;
                 sb.append((char) t);
             } else
                 sb.append(str.charAt(i));
 
-        System.out.println(sb + " ");*/
+        System.out.println(sb);
 
     }
 }
