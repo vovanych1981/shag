@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Chek forms</title>
+        <link href='styles.css' rel='stylesheet' type='text/css'>
+        
+    </head>
+    <body>
+
+<form action='' method='GET' id="poll">
+    <input type = "text" placeholder = "Your first name" name="name" required />
+    
+</form>
+<input type = "button" onclick = "checkButtonClick()" value = "Send" />
+<script>
+    function checkButtonClick(){
+        var nameText = document.getElementById("name").value;
+        if(nameText.length > 0)
+            document.getElementById("poll").submit();
+    }
+   </script>
+    
+    </body>
+    </html>
